@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <title>Anmälan till Bohus Scoutkårs kårläger Dalen 2017</title>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="Anmalan.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="jquery.validationEngine-sv.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"></link>
+
+
+    <link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"/>
+
+    <script>
+      $(document).ready(function(){
+        $("form").validationEngine('attach', {maxErrorsPerField: 1, promptPosition: "topLeft:100"});
+        $("field[affects] [onchange]").each(function(){ 
+          this.onchange()
+        });
+      });
+
+      function personnummer(field, rules, i, options) {
+        if (! /^\d{2}((0[1-9])|(1[012]))(([012]\d)|(3[01]))-\d{4}$/.test($(field).val())) {
+          return "Ange ett personnummer som 'ÅÅMMDD-XXXX'";
+        }
+      }
+
+      function change_visibility(onoff, field) {
+        if (onoff) {
+          $(field).show();
+        } else {
+          $(field).hide();
+          $(field).find("input:not([type='checkbox']),textarea").val("");
+          $(field).find("input[type='checkbox']").prop("checked", false);
+          var sel = $(field).find("select");
+          sel.find("option").first().attr('selected', "selected");
+          sel.val("");
+          sel.change();
+        }
+      }
+
+      function guardian_if_below_18(field, rules, i, options) {
+        var d = new Date();
+        var age = (d.getYear() - (Number($("#personnummer").find("input").val().substring(0,2)))) % 100;
+        if (age >= 18) {
+          if ($("#name input").val() != $(field).val()) {
+            return "Du är över 18, intyga med ditt namn";
+          } 
+        } else {
+          if ($("#name input").val() == $(field).val()) {
+            return "Du är under 18, målsman måste intyga med sitt namn";
+          } 
+        }
+      }
+
+    </script>
+  </head>
+  <body dir="ltr">
+  <content>
+
+    <huvud>
+      Bohus Scoutkår hälsar er välkommna till <br>
+      <strong>Kårläger 2017 vid <kursiv>Dalens Hembygdsgård</kursiv>.</strong>
+    </huvud>
+
+    <box>
+      <p>Torsdagen den 25 Maj till Söndagen 28 Maj är vi vid Dalens hembygdsgård i Rommelanda. </p>
+
+    </box>
+
+    <box>
+     <iframe src="https://www.google.com/maps/d/embed?mid=1fa5cBAQofqvZ3TN7ZCV0yHMkjNc" width="100%" height="480"></iframe>
+     <p>
+       Ni kan läsa mer om gården här om ni vill:
+       <a 
+         href="https://www.hembygd.se/jorlanda/files/2012/02/Hembygdsg%C3%A5rden-Dalen.pdf"
+         target="_blank"
+       >
+         Dalens Hembygdsgård
+       </a>
+     </p>
+     <p>Vi kommer inte att använda själva gården, utan vi bor på ängarna bredvid den.</p>
+    </box>
+
+    <box>
+        <p><strong>Lägeravgifter</strong></p>
+        <p>Scouter: 600 kronor</p>
+        <p>
+          Medföljande föräldrar och barn:
+          <ul>
+            <li>Torsdag: 150kr</li>
+            <li>Fredag: 200kr</li>
+            <li>Lördag: 200kr</li>
+            <li>Söndag: 150kr</li>
+          </ul>
+        </p>
+        <p>Barn under 7 år åker gratis</p>
+    </box>
+    <box>
+      <p>
+        Anmälan görs genom att fylla i anmälan nedan och betala in avgiften till <em>plusgiro 47 90 95-2</em>
+        <strong>senast 20 Maj</strong>.</p>
+      <p>Alla deltagare, även syskon och föräldrar, måste fylla i fullständiga uppgifter.</p>
+    </box>
+  </box>
+  <box>
+   Frågor? skicka dem till <a href="mailto:karlager@bohus-scout.se">karlager@bohus-scout.se</a> eller prata med din ledare.
+  </box>
+
+  <box>
+    <h1> Anmälan </h1>
+    <form
+     action="https://docs.google.com/forms/d/e/1FAIpQLScswY2p09KTFWvo3iyPbFvMdxpIJXYaEe97e2M_LRo7dBbV8w/formResponse" 
+     target="_self"
+     method="POST"
+     id="mG61Hd"
+    >
+      <form-section>
+        <field id="name">
+          <tag>Namn</tag>
+          <input type="text" name="entry.640129935"
+           data-validation-engine="validate[required,minSize[5]]"
+           data-errormessage-value-missing="Du måste ange ett namn"
+           >
+          </input>
+        </field>
+
+        <field id="avdelning" affects="#dagar">
+          <tag>Avdelning</tag>
+          
+          <select name="entry.836433403"
+            onchange="change_visibility((this.options[this.selectedIndex].getAttribute('onsdag')),'#dagar');"
+          >
+            <option value="Spårare">Spårare</option>
+            <option value="Upptäckare">Upptäckare</option>
+            <option value="Äventyrare">Äventyrare</option>
+            <option value="Utmanare" onsdag="yes">Utmanare</option>
+            <option value="Ledare" onsdag="yes">Ledare</option>
+            <option value="Förälder" onsdag="yes">Förälder</option>
+            <option value="Syskon/Ledarbarn" onsdag="yes">Syskon/Ledarbarn</option>
+          </select>
+        </field>
+
+        <field id="dagar" hidden="true">
+          <tag>Vilka dagar <subtag>(om du bara är där delar av lägret, markera vilka dagar)</subtag></tag>
+          <ul>
+            <li><input type="checkbox" value="On" name="entry.1336855302">Onsdag kväll (OBS! Endast för ledare/föräldrar och Utmanare)</input></li>
+            <li><input type="checkbox" value="To" name="entry.1336855302">Torsdag</input></li>
+            <li><input type="checkbox" value="Fr" name="entry.1336855302">Fredag</input></li>
+            <li><input type="checkbox" value="Lö" name="entry.1336855302">Lördag</input></li>
+            <li><input type="checkbox" value="Sö" name="entry.1336855302">Söndag</input></li>
+          </ul>
+        </field>
+        
+
+        <field id="epost">
+          <tag>Epost</tag>
+          <input type="email" name="entry.738362519"
+           data-validation-engine="validate[required,custom[email]]"
+           data-errormessage-value-missing="Du måste ange epost-adress"
+           data-errormessage-custom-error="Ange en korrekt epost-adress"
+           ></input>
+        </field>
+
+        <field id="personnummer">
+          <tag>Personnummer</tag>
+          <input type="text" name="entry.1577393226"
+           data-validation-engine="validate[required,funcCall[personnummer]]"
+           data-errormessage-value-missing="Du måste ange personnummer"
+          ></input>
+        </field>
+      </form-section>
+
+      <hr>
+
+      <h1>Kontaktperson som kan nås under hela lägertiden</h1>
+      <form-section>
+        <field id="kontaktperson-namn">
+          <tag>Namn</tag>
+          <input type="text" name="entry.555162895"
+           data-validation-engine="validate[required]"
+           data-errormessage-value-missing="Du måste ange kontaktperson"
+          ></input>
+        </field>
+
+        <field id="kontaktperson-telefon">
+          <tag>Telefonnummer</tag>
+          <input type="text" name="entry.617509929"
+           data-validation-engine="validate[required,custom[phone]]"
+           data-errormessage-value-missing="Du måste ange kontaktpersonens telefonnummer"
+          ></input>
+        </field>
+
+      </form-section>
+
+      <hr>
+
+      <h1>Hälsoinformation</h1>
+      <form-section>
+        <field id="simkunnig">
+          <tag>Simkunnig</tag>
+          <select name="entry.1748110743">
+            <option value="< 50m"> mindre än 50 m</option>
+            <option value="50m"> mindre än 200 m</option>
+            <option value="200m"> mer än 200 m</option>
+          </select>
+        </field>
+
+        <field id="stelkramp">
+          <tag>Stelkrampsvaccinerad <subtag> (ange år eller 'vet ej')</subtag></tag>
+          <input type="text" name="entry.285527528" ></input>
+        </field>
+
+        <field id="sjukdom_allergi">
+          <tag>Sjukdom eller allergi som lägerledare behöver ha kunskap om</tag>
+          <input type="text" name="entry.765357306"></input>
+        </field>
+
+        <field id="medicin" affects="#medicinering">
+          <tag>Använder medicin <subtag>(ange vilken och för vad)</subtag></tag>
+          <input id="medicin-input" type="text" name="entry.1393206194"
+            onchange="change_visibility(($(this).val().length > 0),'#medicinering');"
+          >
+          </input>
+        </field>
+
+        <field id="medicinering" hidden="true">
+          <tag>Behövs hjälp med medicinering?</tag>
+          <select name="entry.1106545949"
+           data-validation-engine="validate[condRequired[medicin-input]]"
+           data-errormessage-value-missing="Du måste välja något"
+          >
+            <option value="" disabled selected>--- VÄLJ ---</option>
+            <option value="Nej">Nej, jag/scouten sköter själv medicineringen</option>
+            <option value="Ja">Ja, Ledarna behöver hjälpa till med medicinering</option>
+          </select>
+        </field>
+
+      </form-section>
+      <hr>
+
+      <h1>Övriga upplysningar</h1>
+      <form-section>
+        <field id="annat">
+          <textarea name="entry.1154081309" rows="4"></textarea>
+          </tag>
+        </field>
+      </form-section>
+          
+      <hr>
+      <h1>Intygas </h1>
+      <form-section>
+        <p>
+          (av målsman för alla under 18)
+        </p>
+        <field id="signeras">
+          <tag>Fullständigt namn</tag>
+          <input type="text" name="entry.580506334"
+           data-validation-engine="validate[required,funcCall[guardian_if_below_18]]"
+           data-errormessage-value-missing="Du måste intyga med namn"
+          ></input>
+        </field>
+        <input type="submit" value="Skicka in anmälan"></input>
+      </form-section>
+     </form>
+   </box>
+ </body>
+</html>
