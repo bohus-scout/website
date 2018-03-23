@@ -60,32 +60,32 @@
   <content>
 
     <huvud>
-      Bohus Scoutkår hälsar er välkommna till <br>
-      <strong>Kårläger 2017 vid <kursiv>Dalens Hembygdsgård</kursiv>.</strong>
+      Bohus Scoutkår hälsar er välkomna till <br>
+      <b>Kårläger 2018 i Horred.</b>
     </huvud>
 
     <box>
-      <p>Torsdagen den 25 Maj till Söndagen 28 Maj är vi vid Dalens hembygdsgård i Rommelanda. </p>
+      <p>Torsdag 10:e maj till söndag 13:e maj är vi på Friluftsgården Bergsäter i Horred.</p>
 
     </box>
 
     <box>
-     <iframe src="https://www.google.com/maps/d/embed?mid=1fa5cBAQofqvZ3TN7ZCV0yHMkjNc" width="100%" height="480"></iframe>
+     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1iuBc1C1ph6ICVxsjL-H4cOk9srbTh2uB" width="100%" height="480"></iframe>
      <p>
        Ni kan läsa mer om gården här om ni vill:
        <a 
-         href="https://www.hembygd.se/jorlanda/files/2012/02/Hembygdsg%C3%A5rden-Dalen.pdf"
+         href="https://backascout.se/index.php/uthyrning/horred"
          target="_blank"
        >
-         Dalens Hembygdsgård
+         Friluftsgården Bergsäter
        </a>
      </p>
-     <p>Vi kommer inte att använda själva gården, utan vi bor på ängarna bredvid den.</p>
+     <!-- <p>Vi kommer inte att använda själva gården, utan vi bor på ängarna bredvid den.</p> -->
     </box>
 
     <box>
         <p><strong>Lägeravgifter</strong></p>
-        <p>Scouter: 600 kronor</p>
+        <p>Scouter: 650 kronor</p>
         <p>
           Medföljande föräldrar och barn:
           <ul>
@@ -100,12 +100,12 @@
     <box>
       <p>
         Anmälan görs genom att fylla i anmälan nedan och betala in avgiften till <em>plusgiro 47 90 95-2</em>
-        <strong>senast 20 Maj</strong>.</p>
+        <strong>senast 30:e april</strong>.</p>
       <p>Alla deltagare, även syskon och föräldrar, måste fylla i fullständiga uppgifter.</p>
     </box>
   </box>
   <box>
-   Frågor? skicka dem till <a href="mailto:karlager@bohus-scout.se">karlager@bohus-scout.se</a> eller prata med din ledare.
+   Frågor? Skicka dem till <a href="mailto:karlager@bohus-scout.se">karlager@bohus-scout.se</a> eller prata med din ledare.
   </box>
 
   <box>
@@ -118,7 +118,7 @@
     >
       <form-section>
         <field id="name">
-          <tag>Namn</tag>
+          <tag>Namn:</tag>
           <input type="text" name="entry.640129935"
            data-validation-engine="validate[required,minSize[5]]"
            data-errormessage-value-missing="Du måste ange ett namn"
@@ -127,7 +127,7 @@
         </field>
 
         <field id="avdelning" affects="#dagar">
-          <tag>Avdelning</tag>
+          <tag>Avdelning:</tag>
           
           <select name="entry.836433403"
             onchange="change_visibility((this.options[this.selectedIndex].getAttribute('onsdag')),'#dagar');"
@@ -155,7 +155,7 @@
         
 
         <field id="epost">
-          <tag>Epost</tag>
+          <tag>E-post:</tag>
           <input type="email" name="entry.738362519"
            data-validation-engine="validate[required,custom[email]]"
            data-errormessage-value-missing="Du måste ange epost-adress"
@@ -164,7 +164,7 @@
         </field>
 
         <field id="personnummer">
-          <tag>Personnummer</tag>
+          <tag>Personnummer:</tag>
           <input type="text" name="entry.1577393226"
            data-validation-engine="validate[required,funcCall[personnummer]]"
            data-errormessage-value-missing="Du måste ange personnummer"
@@ -177,7 +177,7 @@
       <h1>Kontaktperson som kan nås under hela lägertiden</h1>
       <form-section>
         <field id="kontaktperson-namn">
-          <tag>Namn</tag>
+          <tag>Namn:</tag>
           <input type="text" name="entry.555162895"
            data-validation-engine="validate[required]"
            data-errormessage-value-missing="Du måste ange kontaktperson"
@@ -185,7 +185,7 @@
         </field>
 
         <field id="kontaktperson-telefon">
-          <tag>Telefonnummer</tag>
+          <tag>Telefonnummer:</tag>
           <input type="text" name="entry.617509929"
            data-validation-engine="validate[required,custom[phone]]"
            data-errormessage-value-missing="Du måste ange kontaktpersonens telefonnummer"
@@ -199,7 +199,7 @@
       <h1>Hälsoinformation</h1>
       <form-section>
         <field id="simkunnig">
-          <tag>Simkunnig</tag>
+          <tag>Simkunnig:</tag>
           <select name="entry.1748110743">
             <option value="< 50m"> mindre än 50 m</option>
             <option value="50m"> mindre än 200 m</option>
@@ -208,17 +208,17 @@
         </field>
 
         <field id="stelkramp">
-          <tag>Stelkrampsvaccinerad <subtag> (ange år eller 'vet ej')</subtag></tag>
+          <tag>Stelkrampsvaccinerad: <subtag> (ange år eller 'vet ej')</subtag></tag>
           <input type="text" name="entry.285527528" ></input>
         </field>
 
         <field id="sjukdom_allergi">
-          <tag>Sjukdom eller allergi som lägerledare behöver ha kunskap om</tag>
+          <tag>Sjukdom eller allergi som lägerledare behöver ha kunskap om:</tag>
           <input type="text" name="entry.765357306"></input>
         </field>
 
         <field id="medicin" affects="#medicinering">
-          <tag>Använder medicin <subtag>(ange vilken och för vad)</subtag></tag>
+          <tag>Använder medicin: <subtag>(ange vilken och för vad)</subtag></tag>
           <input id="medicin-input" type="text" name="entry.1393206194"
             onchange="change_visibility(($(this).val().length > 0),'#medicinering');"
           >
@@ -255,7 +255,7 @@
           (av målsman för alla under 18)
         </p>
         <field id="signeras">
-          <tag>Fullständigt namn</tag>
+          <tag>Fullständigt namn:</tag>
           <input type="text" name="entry.580506334"
            data-validation-engine="validate[required,funcCall[guardian_if_below_18]]"
            data-errormessage-value-missing="Du måste intyga med namn"

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 h1,h2 {
   text-decoration: none;
   -webkit-transition: color .25s ease-out;
@@ -9,6 +11,7 @@ h1,h2 {
 
 h1 {
   line-height: 2em;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1#title {
@@ -19,6 +22,7 @@ body {
   background: linear-gradient(#003764, #003700);
   padding: 1.5%;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 content {
@@ -50,6 +54,7 @@ huvud {
 box {
   padding-left: 1%;
   font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
 }
 
 p,ul {
