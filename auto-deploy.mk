@@ -7,5 +7,5 @@ SRC=$(notdir $(wildcard ${FROM}/*))
 
 all: ${SRC:%=${TO}/%}
 ${SRC:%=${TO}/%}: ${TO}/% : ${FROM}/%
-        cp ${FROM}/$* ${TO}/$*
+	cp ${FROM}/$* ${TO}/$*
 
