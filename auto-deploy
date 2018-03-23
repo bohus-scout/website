@@ -1,0 +1,6 @@
+#!/bin/bash
+git fetch
+git checkout origin/master
+rsync anmalan-google-form/ "${HOME}/public_html/scout/"
+
+
