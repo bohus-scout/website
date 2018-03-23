@@ -1,4 +1,5 @@
 #!/bin/bash
+cd $(dirname $0)
 git fetch
 git checkout origin/master
 make -f auto-deploy.mk 
