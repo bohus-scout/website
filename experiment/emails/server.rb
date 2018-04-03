@@ -5,7 +5,12 @@ puts("Server started...\n")
 
 loop do
     s = server.accept
-    puts s.recv 1024
+    while line = s.gets
+        puts line
+        if line.chomp == "."
+            break
+        end
+    end
     s.puts("Ok")
     s.close
 end
