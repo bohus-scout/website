@@ -26,7 +26,7 @@ up = ""
 av = ""
 ut = ""
 others = ""
-a = "SpårareUpptäckareÄventyrareUtmanare"
+a = "SpårareUpptäckareÄventyrare"
 for value in values:
     print(value)
     if value[1] in a:
@@ -36,8 +36,8 @@ for value in values:
             up += ("<tr><td></td><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (value[0], value[1], value[8]))
         elif value[1] == "Äventyrare":
             av += ("<tr><td></td><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (value[0], value[1], value[8]))
-        elif value[1] == "Utmanare":
-            ut += ("<tr><td></td><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (value[0], value[1], value[8]))
+#        elif value[1] == "Utmanare":
+#            ut += ("<tr><td></td><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (value[0], value[1], value[8]))
     elif "To" in value[2]:
         others += ("<tr><td></td><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (value[0], value[1], value[8]))    
         
