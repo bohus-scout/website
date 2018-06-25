@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS',sans-serif;
+}
+
+#wrapper{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    margin: 0;
+    padding: 0;
+    background-color: #01395A;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+#bohus_title{
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Trebuchet MS',sans-serif;
+    grid-column: 2/3;
+    margin: auto;
+    font-size: 3em;
+}
+
+#lilja_vit{
+    height: 5em;
+    grid-column: 1/2;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+#alltid_redo{
+    padding: 0;
+    margin: auto;
+    grid-column: 3/4;
+    text-align: center;
+    color: #fff;
+    font-family: 'Allura', cursive;
+    font-size: 2em;
+    transform: rotate(35deg);
+    margin-right: 1em;
+}
+
+#navbar{
+    margin: auto;
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 95%;
+    background-color: #fff;
+    border-bottom: #01395A 1px solid;
+}
+
+a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #01395A;
+    margin-right: 2em;
+}
