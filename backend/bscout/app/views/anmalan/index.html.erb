@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%= form_tag("/anmalan/anmal", method: "post") do %>
+        <%= label_tag("name", "Namn ")%>
+        <%= text_field_tag("name") %>
+        <%= text_field_tag("phone") %>
+        <%= text_field_tag("email") %>
+        <%= text_field_tag("info") %>
+        <%= submit_tag("Bli scout!") %>
+    <% end %>
+</body>
+</html>
