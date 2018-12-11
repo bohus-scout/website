@@ -1,0 +1,171 @@
+/* Layout som är gemensam börjar här */
+
+
+#separator{/* Style for "Line 1" */
+width: 1839px;
+height: 1px;
+border: 1px solid #01395a;
+}
+
+#banner{/* Style for "Rectangle" */
+width: 1920px;
+height: 140px;
+border: 1px solid #707070;
+background-color: #01395a;
+}
+
+div.test{
+        width: 100em;
+        height: 100em;
+        background-color: black;
+}
+
+/* Style for "Hem" */
+width: 82px;
+height: 47px;
+color: #01395a;
+font-family: "Trebuchet MS";
+font-size: 40px;
+font-weight: 400;
+/* Text style for "Hem" */
+text-decoration: underline;
+
+/* Style for "Bli Scout" */
+width: 157px;
+height: 47px;
+color: #01395a;
+font-family: "Trebuchet MS";
+font-size: 40px;
+font-weight: 400;
+
+/* Style for "Om Kåren" */
+width: 176px;
+height: 47px;
+color: #01395a;
+font-family: "Trebuchet MS";
+font-size: 40px;
+font-weight: 400;
+
+
+/* Style for "Avdelninga" */
+width: 211px;
+height: 47px;
+color: #01395a;
+font-family: "Trebuchet MS";
+font-size: 40px;
+font-weight: 400;
+
+/* Style for "För scoute" */
+width: 203px;
+height: 47px;
+color: #01395a;
+font-family: "Trebuchet MS";
+font-size: 40px;
+font-weight: 400;
+
+/* Style for "Kontakt" */
+width: 140px;
+height: 47px;
+color: #01395a;
+font-family: "Trebuchet MS";
+font-size: 40px;
+font-weight: 400;
+
+
+
+
+
+/* Style for "lilja_vit" */
+width: 126px;
+height: 125px;
+
+/* Style for "BOHUS SCOU" */
+width: 676px;
+height: 93px;
+text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+color: #ffffff;
+font-family: "Trebuchet MS";
+font-size: 80px;
+font-weight: 700;
+text-transform: uppercase;
+
+/* Style for "Alltid red" */
+width: 209px;
+height: 169px;
+color: #ffffff;
+font-family: Pristina;
+font-size: 45px;
+font-weight: 400;
+
+/* Layout som är gemensam slutar här */
+
+
+/* Layout för "Hem" börjar här */
+
+/* Style for "Background" */
+width: 1920px;
+height: 1080px;
+background-color: #ffffff;
+
+
+/* Style for "bohuswebb" */
+width: 800px;
+height: 600px;
+
+
+/* Style for "Rectangle" */
+width: 298px;
+height: 105px;
+box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.36);
+border: 1px solid #707070;
+background-color: #01395a;
+
+        /* Style for "Bli Scout!" */
+        width: 222px;
+        height: 59px;
+        color: #ffffff;
+        font-family: "Trebuchet MS";
+        font-size: 50px;
+        font-weight: 700;
+
+/* Style for "Vad innebä" */
+width: 1024px;
+height: 210px;
+color: #000000;
+font-family: "Trebuchet MS";
+font-size: 30px;
+font-weight: 400;
+
+        /* Vad innebär det att vara scout? Det kan du läsa om på www.scouterna.se
+
+        Under fliken "Om Kåren" hittar du information om vilka vi är och vad vi gör. 
+
+        För att komma i kontakt med kåren och bli scout behöver du bara trycka
+        på knappen! */
+
+
+
+/* Style for "Välkommen" */
+width: 711px;
+height: 59px;
+color: #000000;
+font-family: "Trebuchet MS";
+font-size: 50px;
+font-weight: 400;
+
+    /* Välkommen till Bohus Scoutkår! */
+
+/* Layout för "Hem" slutar här */
+
+
+/* En knapp i "Bli scout" */
+
+
+/* Style for "Rectangle" */
+width: 270px;
+height: 80px;
+box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.32);
+border: 1px solid #707070;
+background-color: #01395a;
+
+/* Slut på en knapp */
