@@ -1,4 +1,5 @@
-class AnmalanMailer < ApplicationMailer
+class AnmalanMailer < ActionMailer::Base
+    layout 'mailer'
     default from: "zentabit@gmail.com"
 
     def anmalan_email
